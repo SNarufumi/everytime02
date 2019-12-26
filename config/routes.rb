@@ -1,4 +1,8 @@
 AppEverytime02::Application.routes.draw do
+  devise_for :users
+  root 'comments#index' # ここを追記します
+  get 'comments/index' # 自動で設定されたルーティング
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
